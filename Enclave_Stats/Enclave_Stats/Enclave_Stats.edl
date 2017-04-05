@@ -1,0 +1,9 @@
+enclave {
+	from "sgx_tstdc.edl" import *;
+    trusted {
+		public void Enclave_EmptyFunc();
+    };
+    untrusted {
+		 
+    };
+};

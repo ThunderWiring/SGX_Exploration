@@ -1,0 +1,11 @@
+enclave {
+	from "sgx_tstdc.edl" import *;
+    trusted {
+		public void Enclave_Read ([in, size=len] int* thread_id, size_t len);
+		public void Enclave_Write([in, size=len] int* thread_id, size_t len);
+		public void Enclave_Init();
+    };
+    untrusted {
+		void Ocall_printf([in, string] char* str, [in] int* num);
+    };
+};

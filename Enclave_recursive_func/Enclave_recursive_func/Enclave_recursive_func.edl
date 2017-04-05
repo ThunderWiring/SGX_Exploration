@@ -1,0 +1,12 @@
+enclave {
+    trusted {
+        /* define ECALLs here. */
+		 public void factorial_Enclave([in, out, size=size ]int* res, size_t size);
+		 public void fibonacci_Enclave([in, out, size=size ]int* res, size_t size);
+    };
+
+    untrusted {
+        /* define OCALLs here. */
+    
+    };
+};

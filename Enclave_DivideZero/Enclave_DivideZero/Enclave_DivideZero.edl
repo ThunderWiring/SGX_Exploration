@@ -1,0 +1,11 @@
+enclave {
+    trusted {
+        /* define ECALLs here. */
+		public void Enclave_DivideByZero();
+    };
+
+    untrusted {
+        /* define OCALLs here. */
+		void Ocall_printf([in, string] char* str);
+    };
+};

@@ -1,0 +1,20 @@
+// sample_enclave.edl
+enclave {
+    trusted {
+		/*
+		 * This is the first step in introducing a trusted function
+		 * Declaring the trusted function.
+		 * returns true if the passed password identical to the inner password in the function.
+		 */
+		public void Enclave_Authenticate([in, string]char* user, [in, string]char* password, [out] int* res);
+		public void Enclave_GetGrades([in, string] char* user, 
+									 [out, size=len] int* arr_out, 
+									 size_t len);
+    };
+
+	untrusted {
+		void print([in, string] const char *string);
+		void print_ptr( uintptr_t ptr);
+		void print_int(int x);
+	};
+};

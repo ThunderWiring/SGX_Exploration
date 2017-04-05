@@ -1,0 +1,15 @@
+enclave {
+    trusted {
+        /* define ECALLs here. */
+		public void OcallFunctions_Enclave();
+    };
+
+    untrusted {
+		void Ocall_printf([in, string] char* str);
+		void Ocall_time([out, size=len]char* outTime, size_t len);
+
+		void Ocall_open([in, string] const char* filename, [out, size=len]unsigned int* fd, size_t len);
+		void Ocall_write([in, string] char* data, [in, size=len]unsigned int* fd, size_t len);
+		void Ocall_close([in] unsigned int* fd);
+    };
+};
