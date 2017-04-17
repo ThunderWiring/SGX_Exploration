@@ -6,7 +6,7 @@ Each file in the repository has two sub-projects, where the first is dedicated f
 and the latter for the Enclave - the trusted code.
 
 ### Prerequistes
-1. Skyake CPU + A motherboard which supports the SGX feature!! (Very important to verify that the motherboard is SGX compatible)
+1. Skylake CPU + A motherboard which supports the SGX feature!! (Very important to verify that the motherboard is SGX compatible)
 2. Windows 10
 3. Visual Studio 2012
 4. Installing the SGX SDK from Intel Developer-Zone website.
